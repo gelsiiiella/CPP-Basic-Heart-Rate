@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://durvfbowth7x4"]
+
+[ext_resource type="Script" path="res://betterTerrainCode.gd" id="1_psi8j"]
+
+[node name="betterTerrainCode" type="Node3D"]
+script = ExtResource("1_psi8j")

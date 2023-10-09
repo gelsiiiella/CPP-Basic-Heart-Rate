@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://djqca6gy45th7"]
+
+[ext_resource type="Script" path="res://menu/start_screen.gd" id="1_1b26d"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 462.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1b26d")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.137
+anchor_bottom = 2.047
+offset_right = -3170.33
+offset_bottom = -1716.2
+
+[node name="StartPanel" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -534.5
+offset_top = -348.0
+offset_right = 534.5
+offset_bottom = 348.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Story" type="Button" parent="Panel/StartPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "STORY MODE"
+
+[node name="Free Play" type="Button" parent="Panel/StartPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "FREE PLAY"
+
+[node name="Back" type="Button" parent="Panel/StartPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "BACK"
+
+[connection signal="pressed" from="Panel/StartPanel/Story" to="." method="_on_story_pressed"]
+[connection signal="pressed" from="Panel/StartPanel/Back" to="." method="_on_back_pressed"]

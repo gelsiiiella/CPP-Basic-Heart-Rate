@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://mpcjdmfjtpko"]
+
+[ext_resource type="Texture2D" uid="uid://ctkgav75ni2ck" path="res://textures/road_left.png" id="1_s1od2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l76ey"]
+albedo_texture = ExtResource("1_s1od2")
+uv2_world_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ax7is"]
+size = Vector2(10, 10)
+subdivide_width = 32
+subdivide_depth = 32
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_l76ey")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_ax7is")
+skeleton = NodePath("")

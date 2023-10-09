@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5ewuly6o7d2t"]
+
+[ext_resource type="Script" path="res://StaticBody3D.gd" id="1_odj4t"]
+[ext_resource type="PackedScene" uid="uid://bi45bbc5tpath" path="res://terrain_controller.tscn" id="2_uxy4b"]
+[ext_resource type="Script" path="res://display.gd" id="3_jog23"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2sk7u"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.974206, 0)
+script = ExtResource("1_odj4t")
+
+[node name="Camera3D" type="Camera3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04965, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_2sk7u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 7.96845, -5.6685)
+
+[node name="TerrainController" parent="." instance=ExtResource("2_uxy4b")]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("3_jog23")

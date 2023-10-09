@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://nfg5s5akvmev"]
+
+[ext_resource type="Script" path="res://user_interface/User Interface.gd" id="1_2wkko"]
+
+[node name="User Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2wkko")
+
+[node name="Physics" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 434.0
+offset_bottom = 154.0
+
+[node name="Speed" type="Label" parent="Physics"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "Speed
+"
+
+[node name="Distance" type="Label" parent="Physics"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "Distance
+
+"
+
+[node name="Health" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 44.0
+offset_right = 1400.0
+offset_bottom = 232.0
+
+[node name="Heart Rate" type="Label" parent="Health"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Heart Rate
+"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1158.0
+offset_top = 46.0
+offset_right = 2038.0
+offset_bottom = 152.0
+
+[node name="Hits" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Hits 0
+"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Achievement
+"
+
+[connection signal="ready" from="." to="." method="_on_update_ui"]

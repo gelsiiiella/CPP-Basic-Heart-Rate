@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cvaneyjh1dobd"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.137
+anchor_bottom = 2.047
+offset_right = -2183.04
+offset_bottom = -1130.76
+
+[node name="Main" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 68.0
+offset_right = 1744.0
+offset_bottom = 850.0
+theme_override_constants/separation = 150
+
+[node name="Start" type="Button" parent="Panel/Main"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "START"
+
+[node name="Settings" type="Button" parent="Panel/Main"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "SETTINGS"
+
+[node name="Exit" type="Button" parent="Panel/Main"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "EXIT"
+
+[connection signal="pressed" from="Panel/Main/Start" to="." method="_on_start_pressed"]
